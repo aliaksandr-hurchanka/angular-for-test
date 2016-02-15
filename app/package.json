@@ -1,10 +1,8 @@
 {
   "name": "angular-for-test",
-  "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
+  "version": "0.0.1",
+  "private": true,
   "dependencies": {
-    "express": "^4.13.3",
     "angular": "^1.4.7",
     "angular-bootstrap": "*",
     "angular-resource": "^1.4.8",
@@ -21,20 +19,12 @@
     "url-loader": "*",
     "webpack": "^1.12.3"
   },
-  "devDependencies": {
-    "browserify": "^13.0.0",
-    "jasmine": "^2.4.1",
-    "jasmine-core": "^2.4.1",
-    "karma": "^0.13.21",
-    "karma-browserify": "^5.0.1",
-    "karma-jasmine": "^0.3.7",
-    "watchify": "^3.7.0",
-    "webpack": "^1.12.13",
-    "webpack-dev-server": "^1.14.1"
-  },
   "scripts": {
-    "start": "node node_modules/.bin/webpack-dev-server --content-base app"
+    "dev": "set NODE_ENV=development&& webpack",
+    "prod": "webpack"
   },
-  "author": "",
-  "license": "ISC"
+  "devDependencies": {
+    "jasmine": "^2.4.1",
+    "karma": "^0.13.21"
+  }
 }

@@ -1,6 +1,12 @@
-var routerApp = angular.module('routerApp', ['ui.router']);
+var testApp = angular.module('testApp', ['ui.router']);
+var testAppCtrl = require('./testApp-ctrl');
 
-routerApp.config(function($stateProvider, $urlRouterProvider) {
+testApp
+    .config(cfgApp)
+    .controller('testAppCtrl', testAppCtrl)
+
+
+function cfgApp($stateProvider, $urlRouterProvider) {
     
     $urlRouterProvider.otherwise('/home');
     
@@ -9,7 +15,8 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
         // HOME STATES AND NESTED VIEWS ========================================
         .state('home', {
             url: '/home',
-            templateUrl: 'home.html'
+            templateUrl: 'home.html',
+            controller: testAppCtrl
         })
         
         // ABOUT PAGE AND MULTIPLE NAMED VIEWS =================================
@@ -18,4 +25,4 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
             templateUrl: 'about.html'      
         });
         
-});
+}
