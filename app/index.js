@@ -6,7 +6,7 @@ testApp
     .controller('testAppCtrl', testAppCtrl)
 
 
-function cfgApp($stateProvider, $urlRouterProvider) {
+function cfgApp($stateProvider, $urlRouterProvider, $rootScope) {
     
     $urlRouterProvider.otherwise('/home');
     
