@@ -20,6 +20,7 @@ module.exports = function(config) {
       'node_modules/angular/angular.js',
       'node_modules/angular-mocks/angular-mocks.js',
       'node_modules/angular-resource/angular-resource.js',
+      'node_modules/angular-ui-router/release/angular-ui-router.js',
       'app/*.js',
       'test/*.js'
     ],
@@ -33,8 +34,8 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-        'test/*.js': [ 'browserify' ],
-        'app/*.js': [ 'browserify' ]
+        'app/*.js': [ 'browserify' ],
+        'test/*.js': [ 'browserify' ]
     },
 
 
